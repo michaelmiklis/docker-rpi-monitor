@@ -6,17 +6,24 @@ image and for information regarding contributing and issues.
 
 docker-rpi-monitor
 ========
-RPi-Monitor from [RPi-Experiences] (http://rpi-experiences.blogspot.de/p/rpi-monitor.html) is an easy and free to use WebUI to
+RPi-Monitor from [RPi-Experiences](http://rpi-experiences.blogspot.de/p/rpi-monitor.html) is an easy and free to use WebUI to
 monitor your Raspberry PI.
 
 To run the docker-rpi-monitor image and monitor your physical Raspberry PI instead of the docker container itself, a lot of
 volumes needs to be mapped into the container:
+
 	/opt/vc
+	
 	/boot
+	
 	/sys
+	
 	/etc
+	
 	/proc
+	
 	/usr/lib
+	
 
 All volumes are mapped as read-only to ensure the container can't modify the data on the docker host. Additionally access to
 the Raspberry PI's vchiq and vcsm device needs to be mapped to the container to access hardware sensors, like CPU Temperature, e.g.
