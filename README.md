@@ -13,15 +13,10 @@ To run the docker-rpi-monitor image and monitor your physical Raspberry PI inste
 volumes needs to be mapped into the container:
 
 	/opt/vc
-	
 	/boot
-	
-	/sys
-	
-	/etc
-	
-	/proc
-	
+	/sys	
+	/etc	
+	/proc	
 	/usr/lib
 	
 
