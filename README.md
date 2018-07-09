@@ -31,24 +31,24 @@ Quickstart
 
 **docker-compose**  
 
-```
-  rpi-monitor:
-    image: michaelmiklis/rpi-monitor:latest
-    hostname: rpi-monitor
-    restart: on-failure
-    devices:
-      - "/dev/vchiq:/dev/vchiq"
-      - "/dev/vcsm:/dev/vcsm"
-    volumes:
-      - "/opt/vc:/opt/vc"
-      - "/boot:/boot"
-      - "/sys:/dockerhost/sys:ro"
-      - "/etc:/dockerhost/etc:ro"
-      - "/proc:/dockerhost/proc:ro"
-      - "/usr/lib:/dockerhost/usr/lib:ro"
-    ports:
-      - "8888:8888"
-```
+
+	rpi-monitor:
+	  image: michaelmiklis/rpi-monitor:latest
+	  hostname: rpi-monitor
+	  restart: on-failure
+	  devices:
+	    - "/dev/vchiq:/dev/vchiq"
+	    - "/dev/vcsm:/dev/vcsm"
+	  volumes:
+	    - "/opt/vc:/opt/vc"
+	    - "/boot:/boot"
+	    - "/sys:/dockerhost/sys:ro"
+	    - "/etc:/dockerhost/etc:ro"
+	    - "/proc:/dockerhost/proc:ro"
+	    - "/usr/lib:/dockerhost/usr/lib:ro"
+	  ports:
+	    - "8888:8888"
+
 
 Access
 ----------
