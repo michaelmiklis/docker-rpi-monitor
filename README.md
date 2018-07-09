@@ -30,24 +30,25 @@ Quickstart
 	docker run --device=/dev/vchiq --device=/dev/vcsm --volume=/opt/vc:/opt/vc --volume=/boot:/boot --volume=/sys:/dockerhost/sys:ro --volume=/etc:/dockerhost/etc:ro --volume=/proc:/dockerhost/proc:ro --volume=/usr/lib:/dockerhost/usr/lib:ro -p=8888:8888 --name="rpi-monitor" -d  michaelmiklis/rpi-monitor:latest
 
 **docker-compose**  
-
-
-	rpi-monitor:
-	  image: michaelmiklis/rpi-monitor:latest
-	  hostname: rpi-monitor
-	  restart: on-failure
-	  devices:
-	    - "/dev/vchiq:/dev/vchiq"
-	    - "/dev/vcsm:/dev/vcsm"
-	  volumes:
-	    - "/opt/vc:/opt/vc"
-	    - "/boot:/boot"
-	    - "/sys:/dockerhost/sys:ro"
-	    - "/etc:/dockerhost/etc:ro"
-	    - "/proc:/dockerhost/proc:ro"
-	    - "/usr/lib:/dockerhost/usr/lib:ro"
-	  ports:
-	    - "8888:8888"
+	
+	version: '3.6'
+	services:
+	  rpi-monitor:
+	    image: michaelmiklis/rpi-monitor:latest
+	    hostname: rpi-monitor
+	    restart: on-failure
+	    devices:
+	      - "/dev/vchiq:/dev/vchiq"
+	      - "/dev/vcsm:/dev/vcsm"
+	    volumes:
+	      - "/opt/vc:/opt/vc"
+	      - "/boot:/boot"
+	      - "/sys:/dockerhost/sys:ro"
+	      - "/etc:/dockerhost/etc:ro"
+	      - "/proc:/dockerhost/proc:ro"
+	      - "/usr/lib:/dockerhost/usr/lib:ro"
+	    ports:
+	      - "8888:8888"
 
 
 Access
