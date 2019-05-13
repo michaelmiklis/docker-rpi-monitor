@@ -25,12 +25,6 @@ RUN sed -i 's/\/sys\//\/dockerhost\/sys\//g' /etc/rpimonitor/template/* && \
     sed -i 's/\#dynamic/dynamic/g' /etc/rpimonitor/template/network.conf && \
     sed -i 's/\#web.statistics/web.statistics/g' /etc/rpimonitor/template/network.conf
 
-# ADD run.sh /run.sh
-
-#RUN sed -i 's_#daemon.shellinabox=https://127.0.0.1:4200_daemon.shellinabox=http://172.20.0.1:19930_g' /etc/rpimonitor/daemon.conf && \
-#    sed -i 's_#web.addons.1.name=Shellinabox_web.addons.2.name=Shellinabox_g' /etc/rpimonitor/data.conf && \
-#    sed -i 's_#web.addons.1.addons=shellinabox_web.addons.2.addons=shellinabox_g' /etc/rpimonitor/data.conf
-
 # Allow access to port 8888
 EXPOSE 8888
 
