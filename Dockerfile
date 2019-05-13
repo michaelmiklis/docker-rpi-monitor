@@ -1,6 +1,6 @@
 FROM resin/rpi-raspbian:latest
 
-LABEL maintainer="Daniel Steiner / <djsteiner93@gmail.com>"
+LABEL maintainer="Michael Miklis / <info@michaelmiklis.de>"
 
 ENV  DEBIAN_FRONTEND noninteractive
 
